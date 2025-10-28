@@ -126,7 +126,7 @@ a:hover {
 .site-header {
     background-image: url('jungle.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     color: #fff;
     padding: 3rem 1rem;
@@ -177,6 +177,11 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
 }
+
+.bestemmingen-grid > a {
+    display: block;
+}
+
 
 .bestemming {
     background-color: #fff;
@@ -235,9 +240,19 @@ a:hover {
 }
 
 .maleisie-sectie {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem 4rem;
+  background-color: #ffffff; /* wit, zoals je wilt */
+  width: 100%;
+  margin: 0;
+  padding: 3rem 0 4rem;
+}
+
+.maleisie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .hero-image img {
@@ -249,11 +264,6 @@ a:hover {
     margin-bottom: 3rem;
 }
 
-.maleisie-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
 
 .pluspunten, .informatie {
     flex: 1 1 45%;
@@ -308,15 +318,53 @@ a:hover {
 }
 
 .thailand-sectie {
-    background-color: #eaf7ea; /* zacht junglegroen */
-    width: 100%;
+  background-color: #eaf7ea; /* zacht junglegroen */
+  width: 100%;
+  margin: 0;
+  padding: 3rem 0; /* boven + onder ruimte */
 }
 
 .thailand-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.intro-banner {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.intro-banner + * {
+    margin-top: 0 !important; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bestemming-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.bestemming-link:hover .bestemming {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.bestemmingen-grid a {
+    margin: 0;
+    padding: 0;
 }

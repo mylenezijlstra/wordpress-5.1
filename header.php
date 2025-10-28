@@ -14,13 +14,16 @@
 
         <nav class="main-nav">
             <ul>
-                <li><a href="/maleisie">Maleisië</a></li>
-                <li><a href="/thailand">Thailand</a></li>
-                <li><a href="/indonesie">Indonesië</a></li>
-                <li><a href="/vietnam">Vietnam</a></li>
-                <li><a href="/filipijnen">Filipijnen</a></li>
+                <li><a href="#maleisie">Maleisië</a></li>
+                <li><a href="#thailand">Thailand</a></li>
+                <li><a href="#indonesie">Indonesië</a></li>
+                <li><a href="#vietnam">Vietnam</a></li>
+                <li><a href="#filipijnen">Filipijnen</a></li>
                 <li><a href="/over">Over</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+<div class="intro-banner">
+    <p>Verre reizen. Voor iedereen uniek.</p>
+</div>
