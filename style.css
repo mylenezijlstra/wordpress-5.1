@@ -134,237 +134,164 @@ a:hover {
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-#slideshow {
-    position: relative;
-    max-width: 100%;
-    height: 500px;
-    margin: 2rem auto;
-    overflow: hidden;
-}
-
-.slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide.active {
-    opacity: 1;
-}
-
-.bestemmingen {
-    padding: 3rem 1rem;
-    background-color: #f4f9f4;
-}
-
-.bestemmingen h2 {
-    text-align: center;
-    font-size: 2rem;
-    color: #2e7d32;
-    margin-bottom: 2rem;
-}
-
-.bestemmingen-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-}
-
-.bestemmingen-grid > a {
-    display: block;
-}
 
 
-.bestemming {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 1rem;
-    text-align: center;
-}
 
-.bestemming img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 6px;
-}
 
-.bestemming h3 {
-    margin: 1rem 0 0.5rem;
-    font-size: 1.2rem;
-    color: #388e3c;
-}
 
-.bestemming p {
-    font-size: 0.95rem;
-    color: #555;
-}
 
-/* Land info */
-.land-info {
-    padding: 3rem 1rem;
-    background-color: #ffffff;
-}
 
-.land-info h2 {
-    font-size: 1.8rem;
-    color: #2e7d32;
-    margin-bottom: 1rem;
-}
 
-.land-info p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
 
-.land-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.land-info ul li {
-    background-color: #e8f5e9;
-    padding: 0.5rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 6px;
-}
-
-.maleisie-sectie {
-  background-color: #ffffff; /* wit, zoals je wilt */
-  width: 100%;
-  margin: 0;
-  padding: 3rem 0 4rem;
-}
-
-.maleisie-content {
+/* Algemene layout */
+.bestemmingen-onepager {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Balk bovenaan met slogan */
+.slogan-balk {
+  background: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2e5d34;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Afwisselende achtergrondkleuren */
+.bg-wit {
+  background-color: #ffffff;
+}
+.bg-groen {
+  background-color: #f4fbf6;
+}
+
+/* Opmaak van elk blok */
+.bestemming-blok {
+  padding: 3rem 2rem;
+}
+.bestemming-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Grote hero-afbeelding bovenaan */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Kleine extra foto */
+.extra-foto img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Lijst met weetjes */
+.weetjes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.weetjes li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  color: #2e5d34;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Informatietekst */
+.informatie {
+  line-height: 1.6;
+  color: #333;
+}
+.informatie h3 {
+  color: #2e5d34;
+  margin-top: 1rem;
+}
+
+.hero-image {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-bottom: 2rem;
 }
 
 .hero-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 3rem;
-}
-
-
-.pluspunten, .informatie {
-    flex: 1 1 45%;
-}
-
-.pluspunten h2,
-.informatie h2 {
-    font-size: 1.8rem;
-    color: #2e7d32;
-    margin-bottom: 1rem;
-}
-
-.pluspunten ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 1.5rem;
-}
-
-.pluspunten ul li {
-    background-color: #e8f5e9;
-    padding: 0.6rem 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.kleine-foto {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.informatie p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.informatie h3 {
-    font-size: 1.2rem;
-    color: #388e3c;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.maps-embed {
-    margin-top: 3rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.thailand-sectie {
-  background-color: #eaf7ea; /* zacht junglegroen */
   width: 100%;
-  margin: 0;
-  padding: 3rem 0; /* boven + onder ruimte */
+  height: auto;
+  display: block;
+  border-radius: 0;
 }
 
-.thailand-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-wrap: wrap;
+.bestemming-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
 }
 
-.intro-banner {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 0;
+/* Linkerkant (weetjes + extra foto) */
+.linkerkant {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.intro-banner + * {
-    margin-top: 0 !important; 
+/* Rechterkant (informatie) */
+.rechterkant {
+  line-height: 1.6;
 }
 
-html {
-    scroll-behavior: smooth;
+/* ===== Titel boven de foto ===== */
+.bestemming-titel {
+  text-align: center;
+  color: #2e5d34; /* donkergroen */
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
 
-.bestemming-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+/* ===== Titelbalk over volledige schermbreedte ===== */
+.titel-balk {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  background: white;
+  padding: 1.2rem 0;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+  z-index: 2;
 }
 
-
-.bestemming-link:hover .bestemming {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
+/* ===== Titel zelf ===== */
+.bestemming-titel {
+  color: #2e5d34; /* donkergroen */
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
 }
 
-.bestemmingen-grid a {
-    margin: 0;
-    padding: 0;
+/* Optioneel: extra ademruimte op kleine schermen */
+@media (max-width: 768px) {
+  .titel-balk {
+    padding: 1rem;
+  }
 }

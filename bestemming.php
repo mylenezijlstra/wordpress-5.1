@@ -14,8 +14,8 @@
         <div><?php the_content(); ?></div>
         <?php
         $weetjes =  get_field("weetjes");
-        print_r($weetjes);
-        
+        print_r($weetjes);                                                  
+
         ?>
     <?php
       endwhile;
