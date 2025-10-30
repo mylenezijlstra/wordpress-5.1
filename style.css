@@ -1,4 +1,6 @@
-/* Algemene instellingen */
+/* =========================================
+   ALGEMENE INSTELLINGEN
+========================================= */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -6,7 +8,9 @@ body {
     color: #2e3d2f;
 }
 
-/* Header */
+/* =========================================
+   HEADER
+========================================= */
 header {
     background: linear-gradient(to right, #2e7d32, #66bb6a);
     color: #fff;
@@ -27,64 +31,18 @@ header p {
     font-style: italic;
 }
 
-/* Content */
-#content {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-#content h2 {
-    font-size: 2rem;
-    color: #388e3c;
-    margin-top: 2rem;
-    border-bottom: 2px solid #a5d6a7;
-    padding-bottom: 0.5rem;
-}
-
-#content div {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-}
-
-/* Footer */
-footer {
-    background-color: #2e7d32;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-}
-
-/* Links */
-a {
-    color: #2e7d32;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Responsiveness */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    #content h2 {
-        font-size: 1.6rem;
-    }
-}
-
+/* =========================================
+   SITE HEADER (met jungle achtergrond)
+========================================= */
 .site-header {
-    background: linear-gradient(to right, #1b5e20, #4caf50);
+    background-image: url('jungle.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
     color: #fff;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 .site-header .branding h1 {
@@ -123,35 +81,9 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.site-header {
-    background-image: url('jungle.jpg');
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 3rem 1rem;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-
-
-
-
-
-
-
-
-
-/* Algemene layout */
-.bestemmingen-onepager {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-}
-
-/* Balk bovenaan met slogan */
+/* =========================================
+   SLOGANBALK
+========================================= */
 .slogan-balk {
   background: white;
   text-align: center;
@@ -162,70 +94,71 @@ a:hover {
   border-bottom: 2px solid #e0e0e0;
 }
 
-/* Afwisselende achtergrondkleuren */
+/* =========================================
+   BESTEMMINGEN LAYOUT
+========================================= */
+.bestemmingen-onepager {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
 .bg-wit {
   background-color: #ffffff;
+  width: 100%;
 }
+
 .bg-groen {
   background-color: #f4fbf6;
 }
 
-/* Opmaak van elk blok */
 .bestemming-blok {
-  padding: 3rem 2rem;
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  padding: 3rem 0;
+  box-sizing: border-box;
 }
+
+
 .bestemming-content {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  align-items: start;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Grote hero-afbeelding bovenaan */
-.hero-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* =========================================
+   TITELBALK (VOLLE BREEDTE)
+========================================= */
+.titel-balk {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 1.2rem 0;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: center;
+  z-index: 5;
+  box-sizing: border-box;
 }
 
-/* Kleine extra foto */
-.extra-foto img {
-  width: 300px;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-/* Lijst met weetjes */
-.weetjes ul {
-  list-style: none;
-  padding: 0;
+.bestemming-titel {
+  color: #2e5d34; /* donkergroen */
+  font-weight: 700;
+  font-size: 2rem;
   margin: 0;
-}
-.weetjes li {
-  margin-bottom: 0.7rem;
-  font-weight: 500;
-  color: #2e5d34;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  text-align: center;
 }
 
-/* Informatietekst */
-.informatie {
-  line-height: 1.6;
-  color: #333;
-}
-.informatie h3 {
-  color: #2e5d34;
-  margin-top: 1rem;
-}
-
+/* =========================================
+   HERO-AFBEELDING (VOLLE BREEDTE)
+========================================= */
 .hero-image {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -237,61 +170,139 @@ a:hover {
   height: auto;
   display: block;
   border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.bestemming-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+/* =========================================
+   EXTRA FOTO
+========================================= */
+.extra-foto img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-/* Linkerkant (weetjes + extra foto) */
+/* =========================================
+   WEETJES
+========================================= */
+.weetjes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weetjes li {
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+  color: #2e5d34;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* =========================================
+   INFORMATIE
+========================================= */
+.informatie {
+  line-height: 1.6;
+  color: #333;
+}
+
+.informatie h3 {
+  color: #2e5d34;
+  margin-top: 1rem;
+}
+
+/* =========================================
+   LINKER- EN RECHTERKANT
+========================================= */
 .linkerkant {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Rechterkant (informatie) */
 .rechterkant {
   line-height: 1.6;
 }
 
-/* ===== Titel boven de foto ===== */
-.bestemming-titel {
-  text-align: center;
-  color: #2e5d34; /* donkergroen */
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 0;
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background-color: #2e7d32;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
 
-/* ===== Titelbalk over volledige schermbreedte ===== */
-.titel-balk {
-  position: relative;
-  left: 50%;
-  width: 100vw;
-  margin-left: -50vw;
-  background: white;
-  padding: 1.2rem 0;
-  border-bottom: 2px solid #e0e0e0;
-  text-align: center;
-  z-index: 2;
+/* =========================================
+   LINKS
+========================================= */
+a {
+    color: #2e7d32;
+    text-decoration: none;
 }
 
-/* ===== Titel zelf ===== */
-.bestemming-titel {
-  color: #2e5d34; /* donkergroen */
-  font-weight: 700;
-  font-size: 2rem;
-  margin: 0;
+a:hover {
+    text-decoration: underline;
 }
 
-/* Optioneel: extra ademruimte op kleine schermen */
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 768px) {
+  .bestemming-content {
+    grid-template-columns: 1fr;
+  }
+
   .titel-balk {
     padding: 1rem;
   }
+
+  .extra-foto img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+      font-size: 2.2rem;
+  }
+
+  #content h2 {
+      font-size: 1.6rem;
+  }
+}
+
+.slideshow-wrapper {
+  width: 100vw;
+  overflow: hidden;
+  background-color: white;
+  position: relative;
+}
+
+.slideshow-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

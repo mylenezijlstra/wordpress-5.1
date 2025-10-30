@@ -5,6 +5,60 @@
   <p>Verre reizen. Voor iedereen uniek.</p>
 </div>
 
+<!-- Slideshow container -->
+<div class="slideshow-wrapper">
+  <div class="slideshow-track">
+
+    <?php
+    $args = array(
+      'post_type' => 'bestemmingen',
+      'posts_per_page' => -1
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+      while ($query->have_posts()) : $query->the_post();
+
+        $hero = get_field('hero_image');
+        $extra = get_field('extra_foto');
+
+        if ($hero): ?>
+          <div class="slide">
+            <img src="<?php echo esc_url($hero['url']); ?>" alt="<?php echo esc_attr($hero['alt']); ?>">
+          </div>
+        <?php endif;
+
+        if ($extra): ?>
+          <div class="slide">
+            <img src="<?php echo esc_url($extra['url']); ?>" alt="<?php echo esc_attr($extra['alt']); ?>">
+          </div>
+        <?php endif;
+
+      endwhile;
+      wp_reset_postdata();
+    endif;
+    ?>
+
+  </div>
+</div>
+
+<!-- Slideshow script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector('.slideshow-track');
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function moveSlide() {
+      index = (index + 1) % slides.length;
+      track.style.transform = `translateX(-${index * 100}vw)`;
+    }
+
+    setInterval(moveSlide, 4000); // elke 4 seconden
+  });
+</script>
+
+
 <main class="bestemmingen-onepager">
 
   <?php
