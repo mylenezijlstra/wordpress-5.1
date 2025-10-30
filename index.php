@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<div id="home"><?php get_header(); ?></div>
 
 <!-- Witte balk bovenaan -->
 <div class="slogan-balk">
@@ -58,7 +58,6 @@
   });
 </script>
 
-
 <main class="bestemmingen-onepager">
 
   <?php
@@ -71,14 +70,14 @@
   $query = new WP_Query($args);
   $counter = 0;
 
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+      $counter++;
+      $bg_class = ($counter % 2 == 0) ? 'bg-groen' : 'bg-wit';
+      $slug = sanitize_title(get_the_title());
+  ?>
 
-if ($query->have_posts()) :
-  while ($query->have_posts()) : $query->the_post();
-    $counter++;
-    $bg_class = ($counter % 2 == 0) ? 'bg-groen' : 'bg-wit';
-?>
-
-  <section class="bestemming-blok <?php echo $bg_class; ?>">
+  <section id="<?php echo $slug; ?>" class="bestemming-blok <?php echo $bg_class; ?>">
 
     <!-- Titel boven de foto -->
     <h2 class="bestemming-titel"><?php the_title(); ?></h2>
@@ -145,11 +144,11 @@ if ($query->have_posts()) :
     </div>
   </section>
 
-<?php
-  endwhile;
-  wp_reset_postdata();
-endif;
-?>
+  <?php
+    endwhile;
+    wp_reset_postdata();
+  endif;
+  ?>
 
 </main>
 
